@@ -15,6 +15,10 @@
 		A72755A9278C441E00321FB7 /* MapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72755A8278C441E00321FB7 /* MapUITests.swift */; };
 		A72755AB278C441E00321FB7 /* MapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72755AA278C441E00321FB7 /* MapUITestsLaunchTests.swift */; };
 		A72755B8278C4A3B00321FB7 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72755B7278C4A3B00321FB7 /* LocationEntity.swift */; };
+		A72755BE278C4CD300321FB7 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72755BD278C4CD300321FB7 /* SearchView.swift */; };
+		A72755C1278C507000321FB7 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72755C0278C507000321FB7 /* SearchViewModel.swift */; };
+		A72755C4278C588600321FB7 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72755C3278C588500321FB7 /* SearchButton.swift */; };
+		A72755C6278C5A0F00321FB7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72755C5278C5A0F00321FB7 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		A72755A8278C441E00321FB7 /* MapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUITests.swift; sourceTree = "<group>"; };
 		A72755AA278C441E00321FB7 /* MapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A72755B7278C4A3B00321FB7 /* LocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
+		A72755BD278C4CD300321FB7 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		A72755C0278C507000321FB7 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		A72755C3278C588500321FB7 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
+		A72755C5278C5A0F00321FB7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 		A7275581278C441B00321FB7 = {
 			isa = PBXGroup;
 			children = (
+				A72755C5278C5A0F00321FB7 /* Colors.xcassets */,
 				A727558C278C441B00321FB7 /* Map */,
 				A727559D278C441E00321FB7 /* MapTests */,
 				A72755A7278C441E00321FB7 /* MapUITests */,
@@ -96,6 +105,7 @@
 		A727558C278C441B00321FB7 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				A72755C2278C587500321FB7 /* Views */,
 				A72755BA278C4AB800321FB7 /* Entities */,
 				A72755B9278C4AAA00321FB7 /* Scenes */,
 				A727558D278C441B00321FB7 /* MapApp.swift */,
@@ -134,6 +144,7 @@
 		A72755B9278C4AAA00321FB7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A72755BF278C505D00321FB7 /* SearchView */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -144,6 +155,23 @@
 				A72755B7278C4A3B00321FB7 /* LocationEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		A72755BF278C505D00321FB7 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				A72755BD278C4CD300321FB7 /* SearchView.swift */,
+				A72755C0278C507000321FB7 /* SearchViewModel.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		A72755C2278C587500321FB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A72755C3278C588500321FB7 /* SearchButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A72755C6278C5A0F00321FB7 /* Colors.xcassets in Resources */,
 				A7275595278C441E00321FB7 /* Preview Assets.xcassets in Resources */,
 				A7275592278C441E00321FB7 /* Assets.xcassets in Resources */,
 			);
@@ -276,9 +305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A72755BE278C4CD300321FB7 /* SearchView.swift in Sources */,
+				A72755C1278C507000321FB7 /* SearchViewModel.swift in Sources */,
 				A7275590278C441B00321FB7 /* ContentView.swift in Sources */,
 				A72755B8278C4A3B00321FB7 /* LocationEntity.swift in Sources */,
 				A727558E278C441B00321FB7 /* MapApp.swift in Sources */,
+				A72755C4278C588600321FB7 /* SearchButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
