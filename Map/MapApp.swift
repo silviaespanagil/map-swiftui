@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import MapKit
 
 @main
 struct MapApp: App {
     var body: some Scene {
         WindowGroup {
-            SearchView(viewModel: SearchViewModel())
+            SearchView(viewModel: SearchViewModel(mapRegion: MKCoordinateRegion()))
         }
     }
 }

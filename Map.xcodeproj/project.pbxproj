@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A727558E278C441B00321FB7 /* MapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727558D278C441B00321FB7 /* MapApp.swift */; };
-		A7275590278C441B00321FB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727558F278C441B00321FB7 /* ContentView.swift */; };
 		A7275592278C441E00321FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7275591278C441E00321FB7 /* Assets.xcassets */; };
 		A7275595278C441E00321FB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7275594278C441E00321FB7 /* Preview Assets.xcassets */; };
 		A727559F278C441E00321FB7 /* MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727559E278C441E00321FB7 /* MapTests.swift */; };
@@ -41,7 +40,6 @@
 /* Begin PBXFileReference section */
 		A727558A278C441B00321FB7 /* Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A727558D278C441B00321FB7 /* MapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapApp.swift; sourceTree = "<group>"; };
-		A727558F278C441B00321FB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A7275591278C441E00321FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7275594278C441E00321FB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A727559A278C441E00321FB7 /* MapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +107,6 @@
 				A72755BA278C4AB800321FB7 /* Entities */,
 				A72755B9278C4AAA00321FB7 /* Scenes */,
 				A727558D278C441B00321FB7 /* MapApp.swift */,
-				A727558F278C441B00321FB7 /* ContentView.swift */,
 				A7275591278C441E00321FB7 /* Assets.xcassets */,
 				A7275593278C441E00321FB7 /* Preview Content */,
 			);
@@ -307,7 +304,6 @@
 			files = (
 				A72755BE278C4CD300321FB7 /* SearchView.swift in Sources */,
 				A72755C1278C507000321FB7 /* SearchViewModel.swift in Sources */,
-				A7275590278C441B00321FB7 /* ContentView.swift in Sources */,
 				A72755B8278C4A3B00321FB7 /* LocationEntity.swift in Sources */,
 				A727558E278C441B00321FB7 /* MapApp.swift in Sources */,
 				A72755C4278C588600321FB7 /* SearchButton.swift in Sources */,
