@@ -1,3 +1,4 @@
-![image](https://user-images.githubusercontent.com/81619759/148752738-5f50b0ef-0d7b-439d-a6e1-fb39ce06918f.png)
+![giphy (1)](https://user-images.githubusercontent.com/81619759/148754081-2925ee40-a1c6-45cc-b9f6-e9f1e0b98749.gif)
+
 
 MapKit app in process 
