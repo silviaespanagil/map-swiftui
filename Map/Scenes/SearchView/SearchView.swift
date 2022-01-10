@@ -6,19 +6,52 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct SearchView: View {
     
     @StateObject var viewModel: SearchViewModel
-    
+    @Environment(\.isEnabled)  var isEnabled: Bool
+   
     var body: some View {
         
-        if viewModel.searchIsDone { ContentView()}
-        
-        else {
+        if viewModel.searchIsDone {
+            
+            VStack {
+                
+                NavigationView {
+                    
+                    Form {
+                        
+                        TextField("Enter latitude", text: $viewModel.latitudeString)
+                        TextField("Enter longitude", text: $viewModel.longitudeString)
+                        
+                        HStack {
+                            
+                            Button(action:{
+                                viewModel.searchIsDone = true
+                                viewModel.saveSearch()
+                            }) {
+                                
+                                HStack(alignment:.center) {
+                                    
+                                    Spacer()
+                                    Image(systemName: "airplane")
+                                    Text("Search place")
+                                    Spacer()
+                                }
+                            }.disabled(viewModel.formIsEmpty)
+                                .buttonStyle(SearchButton())
+                            
+                        }
+                    }
+                   
+                }
+                Map(coordinateRegion: $viewModel.mapRegion)
+            }
+        } else {
             
             NavigationView {
-                
                 Form {
                     
                     TextField("Enter latitude", text: $viewModel.latitudeString)
@@ -28,6 +61,7 @@ struct SearchView: View {
                         
                         Button(action:{
                             viewModel.searchIsDone = true
+                            viewModel.saveSearch()
                         }) {
                             
                             HStack(alignment:.center) {
@@ -41,14 +75,8 @@ struct SearchView: View {
                             .buttonStyle(SearchButton())
                     }
                 }
+                .navigationTitle("Search any place")
             }
         }
-    }
-}
-
-
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView(viewModel: SearchViewModel())
     }
 }
