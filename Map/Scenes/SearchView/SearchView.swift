@@ -6,30 +6,35 @@
 //
 
 import SwiftUI
+import Combine
 import MapKit
 
 struct SearchView: View {
     
     @StateObject var viewModel: SearchViewModel
-    @Environment(\.isEnabled)  var isEnabled: Bool
-   
+    
     var body: some View {
         
-        if viewModel.searchIsDone {
+        VStack {
             
-            VStack {
+            NavigationView {
                 
-                NavigationView {
+                Form {
                     
-                    Form {
+                    TextField("Enter latitude", text: $viewModel.latitudeString)
+                        .keyboardType(.numbersAndPunctuation)
                         
-                        TextField("Enter latitude", text: $viewModel.latitudeString)
-                        TextField("Enter longitude", text: $viewModel.longitudeString)
+                    TextField("Enter longitude", text: $viewModel.longitudeString)
+                        .keyboardType(.numbersAndPunctuation)
+                    
+                    if !viewModel.formIsEmpty {
                         
                         HStack {
                             
                             Button(action:{
+                                
                                 viewModel.searchIsDone = true
+                                viewModel.areCoordinatesValid()
                                 viewModel.saveSearch()
                             }) {
                                 
@@ -42,40 +47,29 @@ struct SearchView: View {
                                 }
                             }.disabled(viewModel.formIsEmpty)
                                 .buttonStyle(SearchButton())
-                            
                         }
-                    }
-                   
-                }
-                Map(coordinateRegion: $viewModel.mapRegion)
-            }
-        } else {
-            
-            NavigationView {
-                Form {
-                    
-                    TextField("Enter latitude", text: $viewModel.latitudeString)
-                    TextField("Enter longitude", text: $viewModel.longitudeString)
-                    
-                    HStack {
-                        
-                        Button(action:{
-                            viewModel.searchIsDone = true
-                            viewModel.saveSearch()
-                        }) {
-                            
-                            HStack(alignment:.center) {
-                                
-                                Spacer()
-                                Image(systemName: "airplane")
-                                Text("Search place")
-                                Spacer()
-                            }
-                        }.disabled(viewModel.formIsEmpty)
-                            .buttonStyle(SearchButton())
                     }
                 }
                 .navigationTitle("Search any place")
+            }
+            
+            if viewModel.searchIsDone {
+                
+                if viewModel.isSearchValid {
+                    
+                    Map(coordinateRegion: $viewModel.mapRegion)
+                } else {
+                    
+                    VStack {
+                        
+                        Text("You must only enter numbers. For example").padding()
+                        Form {
+                            TextField("Enter latitude", text: $viewModel.latitudeExampleString)
+                            TextField("Enter longitude", text: $viewModel.longitudeExampleString)
+                        }.disabled(true)
+                        Spacer()
+                    }
+                }
             }
         }
     }
