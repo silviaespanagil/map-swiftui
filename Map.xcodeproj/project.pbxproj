@@ -18,6 +18,7 @@
 		A72755C1278C507000321FB7 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72755C0278C507000321FB7 /* SearchViewModel.swift */; };
 		A72755C4278C588600321FB7 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72755C3278C588500321FB7 /* SearchButton.swift */; };
 		A72755C6278C5A0F00321FB7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72755C5278C5A0F00321FB7 /* Colors.xcassets */; };
+		A77A477D27998AF1006BD5A2 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A477C27998AF0006BD5A2 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		A72755C0278C507000321FB7 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		A72755C3278C588500321FB7 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		A72755C5278C5A0F00321FB7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A77A477C27998AF0006BD5A2 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				A727558D278C441B00321FB7 /* MapApp.swift */,
 				A7275591278C441E00321FB7 /* Assets.xcassets */,
 				A7275593278C441E00321FB7 /* Preview Content */,
+				A77A477C27998AF0006BD5A2 /* ColorExtension.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				A72755BE278C4CD300321FB7 /* SearchView.swift in Sources */,
 				A72755C1278C507000321FB7 /* SearchViewModel.swift in Sources */,
 				A72755B8278C4A3B00321FB7 /* LocationEntity.swift in Sources */,
+				A77A477D27998AF1006BD5A2 /* ColorExtension.swift in Sources */,
 				A727558E278C441B00321FB7 /* MapApp.swift in Sources */,
 				A72755C4278C588600321FB7 /* SearchButton.swift in Sources */,
 			);
