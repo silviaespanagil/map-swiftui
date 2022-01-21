@@ -16,18 +16,19 @@ struct SearchButton: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         
         if configuration.isPressed {
+            
             return configuration
                 .label
                 .padding()
-                .background(isEnabled ? Color("LightRose") : Color.clear)
-                .foregroundColor(isEnabled ? Color("Green") : Color.clear)
+                .background(isEnabled ? Color.ligthRose : Color.clear)
+                .foregroundColor(isEnabled ? Color.green : Color.clear)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
         } else {
             return configuration
                 .label
                 .padding()
-                .background(isEnabled ? Color("Green") : Color.clear)
-                .foregroundColor(isEnabled ? Color("LightRose") : Color.clear)
+                .background(isEnabled ? Color.green : Color.clear)
+                .foregroundColor(isEnabled ? Color.ligthRose : Color.clear)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
         }
     }
